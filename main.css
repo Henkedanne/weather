@@ -3,3 +3,30 @@
 	padding: 0;
 }
 
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	background-color: #555;
+}
+
+header {
+	background-color: #F8E81C;
+	
+}
+
+h1 {
+	font-size: 144px;
+}
+
+section.current {
+	display: flex;
+	
+	padding: 100px;
+	justify-content: center;
+	background-color: #F8E81C;
+
+}
+footer {
+	padding: 80px;
+	text-align: center;
+	background-color: #F8E81C;
+}
