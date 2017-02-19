@@ -1,32 +1,40 @@
 var posHolder = document.querySelector('#position');
 
-// api key = af7c0d1e9a573a42db1eb2be21afc6e0
+// api key = c2ca76245286de363c961123ba8197b5
 
-var wheaterData;
-var lat = 0;
-var long = 0;
 
-function getApi(url){
+
+
+function getWeather(url){
 	data = fetch(url)
-			.then(blob => blob.json())
-			.then(data => wheaterData.push(data)); //Hur får jag in data i wheaterData???
-			console.log(wheaterData);
+			.then(function(blob) {
+				return blob.json;
+			})
+			.then(function(data) {
+				var name = data;
+				console.log(name);
+			}); 
+	
+	var name = data[1];
+	console.log(name);
 };
+
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (pos){
+        navigator.geolocation.getCurrentPosition(function(pos){
         	
         	
 			posHolder.innerHTML = pos.coords.latitude + "</br>" + pos.coords.longitude;
-			
-			var url = "http://api.openweathermap.org/data/2.5/weather?lat=" + pos.coords.latitude +"&lon=" + pos.coords.longitude + "&APPID=af7c0d1e9a573a42db1eb2be21afc6e0";
+			console.log(pos);
+			var url = "https://cors.now.sh/" + "http://api.openweathermap.org/data/2.5/weather?lat=" + pos.coords.latitude +"&lon=" + pos.coords.longitude + "&units=metric" +"&APPID=c2ca76245286de363c961123ba8197b5";
 
-        	getApi(url);
+        	getWeather(url);
         });
     } else {
         posHolder.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+
 
 
 window.onload = getLocation();
