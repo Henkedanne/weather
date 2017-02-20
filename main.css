@@ -16,14 +16,21 @@ header {
 h1 {
 	font-size: 144px;
 }
+h2 {
+	font-size: 40px;
+}
 
 section.current {
 	display: flex;
-	
+	flex-flow: column;
+	align-items: center;
 	padding: 100px;
 	justify-content: center;
 	background-color: #F8E81C;
 
+}
+.weather_holder {
+	padding-bottom: 10px;
 }
 footer {
 	padding: 80px;
