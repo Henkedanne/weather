@@ -5,7 +5,8 @@
 
 body {
 	font-family: 'Nunito Sans', sans-serif;
-	background-color: #555;
+	background-color: #F8E81C;
+	height: 100vh;
 }
 
 header {
@@ -32,8 +33,63 @@ section.current {
 .weather_holder {
 	padding-bottom: 10px;
 }
+.reload {
+	padding-top: 20px;
+	cursor: pointer;
+}
 footer {
-	padding: 80px;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 80px;
 	text-align: center;
 	background-color: #F8E81C;
 }
+
+.loadwheel {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+}
+.loadwheel:after {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	border: 4px solid transparent;
+	border-top-color: #111;
+	border-bottom-color: #111;
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
