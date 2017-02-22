@@ -7,6 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+
 </head>
 <body>
 	<header>
@@ -15,10 +17,12 @@
 		</div>
 	</header>
 	<section class="current">
-		<div id="loader"></div>
+		
 		<div class="weather_holder"><h2 id="temp"></h2></div>
+		<div class="weather_holder"><i id="weather_icon" class="fa fa-4x" aria-hidden="true"></i></div>
 		<div class="weather_holder"><p id="weather_data"></p></div>
-		<div class="reload"><p>Update</p></div>
+		
+		<div class="reload"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></div>
 	</section>	
 	<footer>
 		<p id="position"></p>
