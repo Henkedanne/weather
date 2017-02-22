@@ -10,15 +10,16 @@ body {
 }
 
 header {
+	display: flex;
 	background-color: #F8E81C;
 	
 }
 
 h1 {
-	font-size: 144px;
+	font-size: 10em;
 }
 h2 {
-	font-size: 40px;
+	font-size: 4em;
 }
 
 section.current {
@@ -49,7 +50,7 @@ footer {
 	text-align: center;
 	background-color: #F8E81C;
 }
-
+/*
 .loadwheel {
 	width: 100px;
 	height: 100px;
@@ -93,3 +94,4 @@ footer {
 	}
 }
 
+*/
