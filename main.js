@@ -2,6 +2,7 @@ var posHolder = document.querySelector('#position');
 var tempHolder = document.querySelector('#temp');
 var weatherHolder = document.querySelector('#weather_data')
 var reloadHolder = document.querySelector('.reload i');
+var reloadClick = document.querySelector('.reload');
 var iconHolder = document.querySelector('#weather_icon')
 
 
@@ -26,7 +27,7 @@ function getWeather(url){
 					iconType = "fa-tint";
 				} else if (weatherId >= 600 && weatherId <= 622) {
 					iconType = "fa-snowflake-o";
-				} else if (weatherId == 800) {
+				} else if (weatherId === 800) {
 					iconType = "fa-sun-o";
 				} else if (weatherId >= 801 && weatherId <= 804) {
 					iconType = "fa-cloud";
@@ -67,7 +68,7 @@ function getLocation() {
     }
 }
 // Reload on click
-reloadHolder.addEventListener('click', getLocation);
+reloadClick.addEventListener('click', getLocation);
 // Loads on start
 window.onload = getLocation();
 
