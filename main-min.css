@@ -15,9 +15,8 @@ header {
   background-color: #F8E81C; }
 
 .title {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 100vw; }
+  width: 100vw;
+  height: auto; }
 
 h1 {
   font-size: 10em; }
@@ -33,9 +32,8 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 section {
   display: -webkit-box;
@@ -52,14 +50,6 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px; }
-  section.current {
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3; }
-  section.forecast {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
 
 .weather_holder {
   padding-bottom: 10px; }
@@ -77,7 +67,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.2); }
 
 .reload:hover {
   background-color: #d1c417; }
