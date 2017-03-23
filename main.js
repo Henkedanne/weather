@@ -52,7 +52,7 @@ function getForecast(url) {
 					return blob.json();
 				})	
 				.then(function(result) {
-					console.log(result);
+					
 					forTempHolder.innerHTML = "Max: " + Math.floor(result.list[7].main.temp_max) + "°" + "<br>" + "Min: " + Math.floor(result.list[7].main.temp_min) + "°";
 					forHolder.innerHTML = result.list[7].weather[0].description;
 				});
