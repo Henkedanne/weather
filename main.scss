@@ -36,11 +36,15 @@ section {
 	align-items: center;
 	justify-content: center;
 	margin-top: 30px;
+
 	&.current {
 		flex-grow: 3;
 	}
 	&.forecast {
 		flex-grow: 1;
+		p {
+			padding: 30px;
+		}
 	}
 }
 
