@@ -38,13 +38,17 @@ section {
 	margin-top: 30px;
 
 	&.current {
-		flex-grow: 3;
+		flex-grow: 4;
+		justify-content: space-between;
 	}
 	&.forecast {
 		flex-grow: 1;
-		p {
-			padding: 30px;
+		justify-content: space-between;
+		#time-stamp {
+			flex-grow: 1;
 		}
+		
+
 	}
 }
 

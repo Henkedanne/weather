@@ -6,6 +6,7 @@ var reloadClick = document.querySelector('.reload');
 var iconHolder = document.querySelector('#weather_icon');
 var forTempHolder = document.querySelector('#fore-temp');
 var forHolder = document.querySelector('#fore-data');
+var temp = document.querySelector('#time-stamp');
 
 
 function getWeather(url){
@@ -45,7 +46,8 @@ function getWeather(url){
 				posHolder.innerHTML = "Near " + "<strong>" + result.name + "</strong>";
 			});
 			
-	};
+}
+
 function getForecast(url) {
 	fetch(url)
 				.then(function(blob) {
@@ -53,10 +55,11 @@ function getForecast(url) {
 				})	
 				.then(function(result) {
 					console.log(result);
-					forTempHolder.innerHTML = "Temp: " + Math.floor(result.list[8].main.temp) + "°";
+					temp.innerHTML = result.list[8].dt_txt;
+					forTempHolder.innerHTML = Math.floor(result.list[8].main.temp) + "°";
 					forHolder.innerHTML = result.list[8].weather[0].description;
 				});
-};
+}
 
 function getLocation() {
 	// clearing all the elements

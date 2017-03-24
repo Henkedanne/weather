@@ -7,7 +7,6 @@
 	<title>The weather!</title>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 
 </head>
@@ -19,7 +18,7 @@
 	</header>
 	<div class="wrapper">
 		<section class="current">
-			<h3>Current</h3>
+			<h3>Today</h3>
 			<div class="weather_holder"><h2 id="temp"></h2></div>
 			<div class="weather_holder"><i id="weather_icon" class="fa fa-4x" aria-hidden="true"></i></div>
 			<div class="weather_holder"><p id="weather_data"></p></div>
@@ -28,8 +27,10 @@
 		</section>	
 		<section class="forecast">
 			<h3>Tomorrow</h3>
-			<div class="weather_holder"><h4 id="fore-temp"></h4></div>
+			<p id="time-stamp"></p>
+			<div class="weather_holder"><h2 id="fore-temp"></h2></div>
 			<div class="weather_holder"><p id="fore-data"></p></div>
+			
 		</section>
 	</div>
 	<footer>
