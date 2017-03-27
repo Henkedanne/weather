@@ -1,3 +1,4 @@
+	// VARIABLES
 var posHolder = document.querySelector('#position');
 var tempHolder = document.querySelector('#temp');
 var weatherHolder = document.querySelector('#weather_data');
@@ -7,6 +8,7 @@ var iconHolder = document.querySelector('#weather_icon');
 var forTempHolder = document.querySelector('#fore-temp');
 var forHolder = document.querySelector('#fore-data');
 var temp = document.querySelector('#time-stamp');
+var nextBtns = document.querySelectorAll('.right-arrow');
 
 
 function getWeather(url){
@@ -83,6 +85,38 @@ function getLocation() {
         posHolder.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+
+var cardIndex = 1;
+showCards(cardIndex);
+
+function plusCards(n) {
+  showCards(cardIndex += n);
+}
+
+function currentCard(n) {
+  showCards(cardIndex = n);
+}
+
+function showCards(n) {
+  var i;
+  var cards = document.getElementsByClassName("card");
+  // var dots = document.getElementsByClassName("dot");
+  if (n > cards.length) {cardIndex = 1} 
+  if (n < 1) {cardIndex = cards.length}
+  for (i = 0; i < cards.length; i++) {
+      cards[i].classList.remove('active'); 
+  }
+  // for (i = 0; i < dots.length; i++) {
+      // dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  cards[cardIndex-1].classList.add('active'); 
+  // dots[cardIndex-1].className += " active";
+}
+nextBtns.forEach(function(btn){
+	btn.addEventListener('click', function(){
+		plusCards(1);
+	});
+});
 // Reload on click
 reloadClick.addEventListener('click', getLocation);
 // Loads on start
